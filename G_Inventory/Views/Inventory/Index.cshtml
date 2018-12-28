@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="container-fluid  dashboard-content">
+    <!---------------------------------------------------------->
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="page-header">
+                <h2 class="pageheader-title">Inventory Managment</h2>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-5">
+        <div class="tab-regular">
+            <ul class="nav nav-tabs " id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="productList-tab" data-toggle="tab" href="#productList" role="tab" aria-controls="productList" aria-selected="true">Products View</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="stockAdjust-tab" data-toggle="tab" href="#stockAdjust" role="tab" aria-controls="stockAdjust" aria-selected="false">Stock Adjustment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pricing-tab" data-toggle="tab" href="#pricing" role="tab" aria-controls="pricing" aria-selected="false">Pricing</a>
+                </li>
+            </ul>
+            <!---------------------------------------------------------->
+            <div class="tab-content" id="myTabContent">
+                <!---------------------------------------------------------->
+                <div class="tab-pane fade show active" id="productList" role="tabpanel" aria-labelledby="productList-tab">
+                    <div class="row">
+                        <!-- ============================================================== -->
+                        <!-- basic table  -->
+                        <!-- ============================================================== -->
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <h5 class="card-header">Basic Table</h5>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="productsTable" class="table table-striped table-bordered first">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Position</th>
+                                                    <th>Office</th>
+                                                    <th>Age</th>
+                                                    <th>Start date</th>
+                                                    <th>Salary</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tiger Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>61</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>$320,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Garrett Winters</td>
+                                                    <td>Accountant</td>
+                                                    <td>Tokyo</td>
+                                                    <td>63</td>
+                                                    <td>2011/07/25</td>
+                                                    <td>$170,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ashton Cox</td>
+                                                    <td>Junior Technical Author</td>
+                                                    <td>San Francisco</td>
+                                                    <td>66</td>
+                                                    <td>2009/01/12</td>
+                                                    <td>$86,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end basic table  -->
+                        <!-- ============================================================== -->
+                    </div>
+                </div>
+                <!---------------------------------------------------------->
+                <div class="tab-pane fade" id="stockAdjust" role="tabpanel" aria-labelledby="stockAdjust-tab">
+                    <h3>Tab Content Heading</h3>
+                    <p>Nullam et tellus ac ligula condimentum sodales. Aenean tincidunt viverra suscipit. Maecenas id molestie est, a commodo nisi. Quisque fringilla turpis nec elit eleifend vestibulum. Aliquam sed purus in odio ullamcorper congue consectetur in neque. Aenean sem ex, tempor et auctor sed, congue id neque. </p>
+                </div>
+                <!---------------------------------------------------------->
+                <div class="tab-pane fade" id="pricing" role="tabpanel" aria-labelledby="pricing-tab">
+                    <h3>Tab Heading Content </h3>
+                    <p>Vivamus pellentesque vestibulum lectus vitae auctor. Maecenas eu sodales arcu. Fusce lobortis, libero ac cursus feugiat, nibh ex ultricies tortor, id dictum massa nisl ac nisi. Fusce a eros pellentesque, ultricies urna nec, consectetur dolor. Nam dapibus scelerisque risus, a commodo mi tempus eu.</p>
+                </div>
+                <!---------------------------------------------------------->
+            </div>
+            <!---------------------------------------------------------->
+        </div>
+    </div>
+    <!---------------------------------------------------------->
+</div><!--container-fluid  dashboard-content end-->
+
+<!--Scripts Section-->
+<script src="~/Content/myScripts/inventoryJS.js"></script>
