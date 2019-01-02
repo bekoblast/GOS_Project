@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <!--"@RenderSection("scripts", required: false)"-->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +18,12 @@
     <link rel="stylesheet" href="~/Content/vendor/jvectormap/jquery-jvectormap-2.0.2.css">
     <link rel="stylesheet" href="~/Content/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <link href="~/Content/vendor/datatables/datatables.min.css" rel="stylesheet" />
+    <link href="~/Content/libs/css/animate.css" rel="stylesheet" />
 
     <!--*****************************************************************************-->
     <!-- jquery 3.3.1 js-->
     <script src="~/Content/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/libs/js/jquery.validate.min.js"></script>
     <!-- bootstrap bundle js-->
     <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <!-- slimscroll js-->
@@ -184,19 +188,19 @@
                             </li>
                             <!------------------------------------------------------->
                             <li class="nav-item ">
-                                <a class="nav-link active" href="@Url.Action("Index","Home")"><i class="fas fas-fw fa-chart-pie"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                <a class="nav-link @ViewBag.dashboard" href="@Url.Action("Index","Home")"><i class="fas fas-fw fa-chart-pie"></i>Dashboard <span class="badge badge-success">6</span></a>
                             </li>
                             <!------------------------------------------------------->
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Index","Inventory")"><i class="fas fas-fw  fa-warehouse"></i>Inventory</a>
+                                <a class="nav-link @ViewBag.inventory" href="@Url.Action("Index","Inventory")"><i class="fas fas-fw  fa-warehouse"></i>Inventory</a>
                             </li>
                             <!------------------------------------------------------->
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fas-fw  fa-cart-arrow-down"></i>Purchases</a>
+                                <a class="nav-link @ViewBag.purchase" href="#"><i class="fas fas-fw  fa-cart-arrow-down"></i>Purchases</a>
                             </li>
                             <!------------------------------------------------------->
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fas-fw  fa-donate"></i>Sales</a>
+                                <a class="nav-link @ViewBag.sales" href="#"><i class="fas fas-fw  fa-donate"></i>Sales</a>
                             </li>
                             <!------------------------------------------------------->
                         </ul>

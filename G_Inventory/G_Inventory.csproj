@@ -49,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -194,12 +196,34 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>InventoryModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\InventoryModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventoryModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventoryModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>InventoryModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\libs\css\animate.css" />
     <Content Include="Content\libs\css\style.css" />
     <Content Include="Content\libs\js\dashboard-ecommerce.js" />
     <Content Include="Content\libs\js\dashboard-finance.js" />
@@ -207,6 +231,7 @@
     <Content Include="Content\libs\js\dashboard-sales.js" />
     <Content Include="Content\libs\js\gmaps.min.js" />
     <Content Include="Content\libs\js\google_map.js" />
+    <Content Include="Content\libs\js\jquery.validate.min.js" />
     <Content Include="Content\libs\js\jvectormap.custom.js" />
     <Content Include="Content\libs\js\main-js.js" />
     <Content Include="Content\myScripts\inventoryJS.js" />
@@ -553,6 +578,16 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Models\InventoryModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InventoryModel.edmx</DependentUpon>
+      <LastGenOutput>InventoryModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\InventoryModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InventoryModel.edmx</DependentUpon>
+      <LastGenOutput>InventoryModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\vendor\fonts\circular-std\CircularStd-Black.woff" />
@@ -592,6 +627,13 @@
     <Content Include="Content\vendor\summernote\editor-fonts\summernote4c4d.ttf" />
     <Content Include="Content\vendor\summernote\editor-fonts\summernote4c4d.woff" />
     <Content Include="Content\vendor\summernote\editor-fonts\summernoted41d.eot" />
+    <EntityDeploy Include="Models\InventoryModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>InventoryModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\InventoryModel.edmx.diagram">
+      <DependentUpon>InventoryModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -650,6 +692,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
